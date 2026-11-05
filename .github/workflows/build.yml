@@ -9,11 +9,6 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Uloz pliki w foldery
-        run: |
-          mkdir -p src/main/java/pl/anticheat src/main/resources
-          mv AntiCheat.java src/main/java/pl/anticheat/
-          mv plugin.yml config.yml src/main/resources/
       - run: mvn -B package
       - uses: actions/upload-artifact@v4
         with:
