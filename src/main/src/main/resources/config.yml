@@ -1,1 +1,28 @@
+prefix: "&c[AC] &7"
+alert-cooldown-seconds: 3
+kick-at: 40
+vl-decay-seconds: 60
+kick-message: "&cWykryto nieuczciwe modyfikacje klienta."
 
+checks:
+  fly: true
+  speed: true
+  timer: true
+  reach: true
+  autoclicker: true
+  nuker: true
+  xray: true
+
+speed-base: 0.65
+timer-max-packets-per-second: 26
+reach-max: 4.5
+max-cps: 25
+nuker-max-blocks-per-second: 15
+
+xray:
+  ores:
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+  count: 8
+  window-seconds: 120
+  cooldown-seconds: 30

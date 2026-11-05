@@ -1,0 +1,24 @@
+name: AntyCheat
+version: 1.0.0
+main: pl.anticheat.AntiCheat
+api-version: '1.13'
+description: Prosty antycheat - fly, speed, timer, reach, autoclicker, nuker, xray
+softdepend: [LuckPerms]
+commands:
+  ac:
+    description: Komendy antycheata
+    aliases: [anticheat, antycheat]
+    usage: /ac <alerts|tp|vl|reload>
+permissions:
+  anticheat.alerts:
+    description: Widzenie alertow antycheata
+    default: op
+  anticheat.teleport:
+    description: Teleport do gracza z alertu
+    default: op
+  anticheat.admin:
+    description: Reload i podglad VL
+    default: op
+  anticheat.bypass:
+    description: Omijanie wszystkich sprawdzen
+    default: false
