@@ -1,0 +1,21 @@
+name: build
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Uloz pliki w foldery
+        run: |
+          mkdir -p src/main/java/pl/anticheat src/main/resources
+          mv AntiCheat.java src/main/java/pl/anticheat/
+          mv plugin.yml config.yml src/main/resources/
+      - run: mvn -B package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plugin
+          path: target/*.jar
