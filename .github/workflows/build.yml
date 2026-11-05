@@ -9,6 +9,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+      - name: Ustaw plik w folderze
+        run: |
+          mkdir -p src/main/java/pl/anticheat
+          mv AntiCheat.java src/main/java/pl/anticheat/
       - run: mvn -B package
       - uses: actions/upload-artifact@v4
         with:
